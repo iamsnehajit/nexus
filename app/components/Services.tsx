@@ -25,10 +25,10 @@ export default function Services() {
                                     type="file" 
                                     id="file-upload" 
                                     className="hidden" 
-                                    onChange={(e) => console.log(e.target.files[0])} 
+                                    onChange={(e) => {if (e.target.files && e.target.files.length > 0) {console.log(e.target.files[0]);}}}
                                 />
 
-                                {/* এই টেক্সটে ক্লিক করলেই আপলোড অপশন খুলবে */}
+                                
                                 <label 
                                     htmlFor="file-upload" 
                                     className="text-[#0D7F80] poppin font-medium cursor-pointer text-sm"
@@ -55,7 +55,7 @@ export default function Services() {
                             <div>
                                 <h3 className="poppin text-black font-medium text-xl leading-[1.2]">Doctor Appointment</h3>
 
-                                {/* এই টেক্সটে ক্লিক করলেই আপলোড অপশন খুলবে */}
+                                
                                 <label 
                                     
                                     className="text-[#A18906] poppin font-medium cursor-pointer text-sm"
@@ -83,7 +83,7 @@ export default function Services() {
                             <div>
                                 <h3 className="poppin text-black font-medium text-xl leading-[1.2]">Lab Tests</h3>
 
-                                {/* এই টেক্সটে ক্লিক করলেই আপলোড অপশন খুলবে */}
+                               
                                 <label 
                                    
                                     className="text-[#CC4370] poppin font-medium cursor-pointer text-sm"

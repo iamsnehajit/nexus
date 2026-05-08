@@ -27,10 +27,10 @@ export default function OrderMedicine() {
                                         type="file" 
                                         id="file-upload" 
                                         className="hidden" 
-                                        onChange={(e) => console.log(e.target.files[0])} 
+                                        onChange={(e) => {if (e.target.files && e.target.files.length > 0) {console.log(e.target.files[0]);}}}
                                     />
 
-                                    {/* এই টেক্সটে ক্লিক করলেই আপলোড অপশন খুলবে */}
+                                   
 
                                     <label 
                                         htmlFor="file-upload" 
@@ -56,11 +56,7 @@ export default function OrderMedicine() {
                                     <h2 className="poppin text-xl font-medium dark leading-[1.2]">Re-Order Medicine</h2>
                                     <p className="poppin text-sm dark leading-[1.2] mt-3 mb-4">Restock your frequently bought items with a single tap</p>
                                     <div className="bg-[#F47527] flex justify-center items-center max-w-[150px] p-1 rounded-[5px] overflow-hidden">
-                                    {/* <Image src={paperclip} width={20} height={20} alt="Image not found"/> */}
                                     
-
-                                    {/* এই টেক্সটে ক্লিক করলেই আপলোড অপশন খুলবে */}
-
                                     <button 
                                         
                                         className="text-white poppin font-medium cursor-pointer text-sm pl-1"
