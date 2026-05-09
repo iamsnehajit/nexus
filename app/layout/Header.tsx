@@ -151,44 +151,44 @@ export default function Header() {
   const opt4 = [{ value: 'abc', label: 'abc' }, { value: 'xyz', label: 'xyz' }];
   const opt5 = [{ value: 'abc', label: 'abc' }, { value: 'xyz', label: 'xyz' }];
 
-  // টাইপস্ক্রিপ্ট এরর এড়াতে টাইপ ডিফাইন করা হলো
+  
   const handleChange = (selectedOption: any, name: string) => {
     console.log(`Selected in ${name}:`, selectedOption);
   };
 
   return (
-    <div className='fixed top-0 left-0 w-full pt-5 z-50 bg-white'>
+    <div className='fixed top-0 left-0 w-full pt-3 z-50 bg-white'>
       <div className='container-custom mx-auto'>
           <nav className='navbar'>
-            <div className='grid grid-cols-12 gap-1'>
-                <div className='col-span-1 pr-2 flex items-center logo-div relative'>
+            <div className='grid grid-cols-12 gap-1 pb-3'>
+                <div className='col-span-2 pr-2 flex items-center logo-div relative'>
                     <Link href="/">
                       <Image 
                         src={logoImg} 
                         alt="Nexus Logo" 
-                        width={200}
-                        height={100} 
+                        width={250}
+                        height={150} 
                         priority className="brand-logo"
                       />
                     </Link>
                 </div>
-                <div className='col-span-11'>
+                <div className='col-span-10'>
                   <div className='grid grid-cols-12 gap-1 pl-5'>
                     <div className='col-span-4'>
                       <div>
                         <label className='gray text-sm leading-0 mb-0 inline-block'>Delivery & Store Pickup Available</label>
-                        <div className="flex">
+                        <div className="flex top-dropdown relative z-30">
                           <Image src={map} alt="Location Pin" width={18} height={30} priority className="map-logo"/>
                           <SearchDropdown />
                         </div>
                       </div>
                     </div>
-                    <div className='col-span-6 flex items-center justify-end pr-4'> 
-                      <div className="search-div border border-[#EDEDED] w-[75%] px-2 py-2 relative">
+                    <div className='col-span-5 flex items-center justify-end'> 
+                      <div className="search-div border border-[#EDEDED] w-full bg-[#f8f8f8] rounded-[10px] overflow-hidden px-2 py-3 relative">
                           <form className="flex">
                             <Image src={search} alt="Search Icon" width={20} height={40} priority className="brand-logo pr-1"/>
                             <input type="text" placeholder="Search for medicines, lab tests, wellness & beauty" className="border-0 outline-0 w-[85%] text-sm text-[#929292]"/>
-                            <button type="reset" className="absolute right-1 top-2.5 cursor-pointer">
+                            <button type="reset" className="absolute right-1 top-3.5 cursor-pointer">
                               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="18" y1="6" x2="6" y2="18"></line>
                                 <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -197,7 +197,7 @@ export default function Header() {
                           </form>
                       </div>
                     </div>
-                    <div className='col-span-2'>
+                    <div className='col-span-3'>
                       <div className="flex items-center h-full justify-end">
                           <div className="userarea flex justify-end">
                           <div className="relative">

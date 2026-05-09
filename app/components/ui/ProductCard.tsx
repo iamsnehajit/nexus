@@ -136,7 +136,7 @@ export default function ProductCard({ product }: ProductProps) {
                 ADD
               </button>
             ) : (
-              <div className="flex items-center justify-between bg-[#0D7F80] text-white shadow-[0px_0px_4px_0px_#0D7F80] border rounded-[8px] border-[#0D7F80] overflow-hidden">
+              <div className="flex items-center justify-between bg-[#0D7F80] text-white shadow-[0px_0px_4px_0px_#0D7F80] border rounded-[8px] border-[#0D7F80] overflow-hidden w-[70%] mr-0 ml-auto">
                 <button 
                   onClick={handleDecrease}
                   className="px-2 py-1.5 hover:bg-[#F47527] text-[16px] font-medium cursor-pointer"
