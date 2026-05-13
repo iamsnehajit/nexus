@@ -62,4 +62,16 @@ Select{background-color: antiquewhite !important;}
 }
 @media (max-width: 1280px) {
   .container-custom{width: 1200px; margin: 0 auto;}
+  .bottom-menu-grid{width: 100%;}
+}
+@media (max-width: 1199px) {
+  .container-custom{width: 1000px; margin: 0 auto;}
+}
+@media (max-width: 999px) {
+  .container-custom{width: 90%; padding: 0 10px; margin: 0 auto;}
+  .hambargar-menu{height: 20px; border-top: 2px solid black; border-bottom: 2px solid black; width: 20px; margin: 6px 0 0 auto;}
+  .hambargar-menu::after{content: ''; position: absolute; top: 45%; left: 0; width: 100%; background-color: #000; z-index: 1; height: 2px;}
+}
+@media (max-width: 767px) {
+  .container-custom{width: 95%; padding: 0 7px; margin: 0 auto;}
 }

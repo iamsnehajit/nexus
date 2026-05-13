@@ -123,7 +123,7 @@ export default function ProductCard({ product }: ProductProps) {
         <div className='grid grid-cols-12'>
           <div className='col-span-6'>
               <div className="">
-                <p className="text-lg leading-[1.3] font-bold dark">₹{product.price}</p>
+                <p className="text-[16px] md:text-lg leading-[1.3] font-bold dark">₹{product.price}</p>
                 <p className="text-sm text-[#798383] line-through">₹{product.oldPrice}</p>
               </div>
           </div>
@@ -131,22 +131,22 @@ export default function ProductCard({ product }: ProductProps) {
               {quantity === 0 ? (
               <button
                 onClick={handleAdd}
-                className="shadow-[0px_0px_4px_0px_#0D7F80] cursor-pointer text-[#0D7F80] text-[16px] py-1.5 px-4 border rounded-[8px] border-[#0D7F80] font-medium hover:text-[#fff] hover:bg-[#0D7F80]"
+                className="shadow-[0px_0px_4px_0px_#0D7F80] cursor-pointer text-[#0D7F80] text-sm md:text-[16px] py-1.5 px-4 border rounded-[8px] border-[#0D7F80] font-medium hover:text-[#fff] hover:bg-[#0D7F80]"
               >
                 ADD
               </button>
             ) : (
-              <div className="flex items-center justify-between bg-[#0D7F80] text-white shadow-[0px_0px_4px_0px_#0D7F80] border rounded-[8px] border-[#0D7F80] overflow-hidden w-[70%] mr-0 ml-auto">
+              <div className="flex items-center text-sm md:text-[16px] justify-between bg-[#0D7F80] text-white shadow-[0px_0px_4px_0px_#0D7F80] border rounded-[8px] border-[#0D7F80] overflow-hidden md:w-[70%] mr-0 ml-auto">
                 <button 
                   onClick={handleDecrease}
-                  className="px-2 py-1.5 hover:bg-[#F47527] text-[16px] font-medium cursor-pointer"
+                  className="px-2 py-1.5 hover:bg-[#F47527] text-sm md:text-[16px] font-medium cursor-pointer"
                 >
                   −
                 </button>
                 <span className="font-medium text-[16px]">{quantity}</span>
                 <button 
                   onClick={handleIncrease}
-                  className="px-2 py-1.5 hover:bg-[#F47527] text-[16px] font-medium cursor-pointer"
+                  className="px-2 py-1.5 hover:bg-[#F47527] text-sm md:text-[16px] font-medium cursor-pointer"
                 >
                   +
                 </button>

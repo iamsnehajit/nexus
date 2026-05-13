@@ -5,15 +5,15 @@ import Lab2 from "../../public/images/lab2.svg";
 import Lab3 from "../../public/images/lab3.svg";
 export default function LabTest() {
   return (
-    <div>
-        <div className="container-custom relative py-5">
+    <div className="py-10 lg:py-5">
+        <div className="container-custom relative">
             <div className="flex justify-between items-center mb-6">
-                <h2 className='dark text-[25px] font-medium'>Frequently Booked Lab Tests</h2>
-                <button className="text-[#F47527] text-[16px] font-medium uppercase">View All &gt;</button>
+                <h2 className='dark text-[20px] md:text-[25px] font-medium'>Frequently Booked Lab Tests</h2>
+                <button className="text-[#F47527] text-[14px] md:text-[16px] font-medium uppercase">View All &gt;</button>
             </div>
             <div className="lab-details">
                 <div className="grid grid-cols-12 gap-3">
-                    <div className="col-span-3">
+                    <div className="col-span-12 md:col-span-6 lg:col-span-3">
                         <div className=" bg-[#FFFBE4] relative p-4 rounded-xl overflow-hidden min-h-45">
                             <div className="lab-details-top flex justify-between items-center">
                                 <label className="text-[16px] bg-[#F47527] py-1 px-3 rounded-[4px] text-white font-medium overflow-hidden">60% OFF</label>
@@ -29,7 +29,7 @@ export default function LabTest() {
 
                     {/* lab 2 */}
 
-                    <div className="col-span-3">
+                    <div className="col-span-12 md:col-span-6 lg:col-span-3">
                         <div className=" bg-[#FFFBE4] relative p-4 rounded-xl overflow-hidden min-h-45">
                             <div className="lab-details-top flex justify-between items-center">
                                 <label className="text-[16px] bg-[#F47527] py-1 px-3 rounded-[4px] text-white font-medium overflow-hidden">60% OFF</label>
@@ -45,7 +45,7 @@ export default function LabTest() {
 
                       {/* lab 3 */}
 
-                    <div className="col-span-3">
+                    <div className="col-span-12 md:col-span-6 lg:col-span-3">
                         <div className=" bg-[#FFFBE4] relative p-4 rounded-xl overflow-hidden min-h-45">
                             <div className="lab-details-top flex justify-between items-center">
                                 <label className="text-[16px] bg-[#F47527] py-1 px-3 rounded-[4px] text-white font-medium overflow-hidden">60% OFF</label>
@@ -61,7 +61,7 @@ export default function LabTest() {
 
                     {/* lab 4 */}
 
-                    <div className="col-span-3">
+                    <div className="col-span-12 md:col-span-6 lg:col-span-3">
                         <div className=" bg-[#FFFBE4] relative p-4 rounded-xl overflow-hidden min-h-45">
                             <div className="lab-details-top flex justify-between items-center">
                                 <label className="text-[16px] bg-[#F47527] py-1 px-3 rounded-[4px] text-white font-medium overflow-hidden">60% OFF</label>

@@ -10,7 +10,7 @@ export default function OrderMedicine() {
     <div>
         <div className="relative container-custom py-10">
              <div className="grid grid-cols-12 gap-3">
-                <div className="col-span-6">
+                <div className="md:col-span-6 col-span-12">
                     <div className="order-medicine relative overflow-hidden bg-[#EBF9FF] rounded-xl h-36">
                         <div className="grid grid-cols-12 gap-3 h-full">
                             <div className="col-span-4 flex justify-center items-center relative overflow-hidden h-full">
@@ -19,7 +19,7 @@ export default function OrderMedicine() {
                             </div>
                             <div className="col-span-8 flex justify-start items-center h-full">
                                 <div>
-                                    <h2 className="poppin text-xl font-medium dark leading-[1.2]">Upload for Order</h2>
+                                    <h2 className="poppin text-[16px] md:text-xl font-medium dark leading-[1.2]">Upload for Order</h2>
                                     <p className="poppin text-sm dark leading-[1.2] mt-3 mb-4">Upload prescription and we will deliver your medicines</p>
                                     <div className="bg-[#F47527] flex justify-center items-center max-w-[180px] p-1 rounded-[5px] overflow-hidden">
                                     <Image src={paperclip} width={20} height={20} alt="Image not found"/>
@@ -44,7 +44,7 @@ export default function OrderMedicine() {
                         </div>
                     </div>
                 </div>
-                <div className="col-span-6">
+                <div className="md:col-span-6 col-span-12">
                     <div className="order-medicine relative overflow-hidden bg-[#F7EEFA] rounded-xl h-36">
                         <div className="grid grid-cols-12 gap-3 h-full">
                             <div className="col-span-4 flex justify-center items-center relative overflow-hidden h-full">
@@ -53,7 +53,7 @@ export default function OrderMedicine() {
                             </div>
                             <div className="col-span-8 flex justify-start items-center h-full">
                                 <div>
-                                    <h2 className="poppin text-xl font-medium dark leading-[1.2]">Re-Order Medicine</h2>
+                                    <h2 className="poppin text-[16px] md:text-xl font-medium dark leading-[1.2]">Re-Order Medicine</h2>
                                     <p className="poppin text-sm dark leading-[1.2] mt-3 mb-4">Restock your frequently bought items with a single tap</p>
                                     <div className="bg-[#F47527] flex justify-center items-center max-w-[150px] p-1 rounded-[5px] overflow-hidden">
                                     

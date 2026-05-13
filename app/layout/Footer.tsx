@@ -13,26 +13,26 @@ import paytm from '../../public/images/paytm.svg';
 export default function Footer() {
   return (
     <div>
-      <footer className='bg-[#E2F9F0] overflow-hidden rounded-2xl my-5 mx-5 py-20'>
+      <footer className='bg-[#E2F9F0] overflow-hidden rounded-2xl my-5 mx-5 py-10 lg:py-20'>
         <div className='container-custom'>
-          <div className='grid grid-cols-12'>
-            <div className='col-span-2'>
-                <h2 className='poppin dark text-xl font-medium mb-3'>Company</h2>
+          <div className='grid grid-cols-12 gap-2 md:gap-0'>
+            <div className='col-span-6 lg:col-span-2 order-1'>
+                <h2 className='poppin dark text-[18px] md:text-xl font-medium mb-3'>Company</h2>
                 <ul>
                     <li className='poppin dark text-sm mb-2'><Link href="/">About Us</Link></li>
                     <li className='poppin dark text-sm mb-2'><Link href="/">Careers</Link></li>
                     <li className='poppin dark text-sm mb-2'><Link href="/">Blog</Link></li>
                     <li className='poppin dark text-sm mb-2'><Link href="/">Partner</Link></li>
                 </ul>
-                <h3 className='poppin dark text-xl font-medium mb-3 mt-1'>Our Services</h3>
+                <h3 className='poppin dark text-[18px] md:text-xl font-medium mb-3 mt-1'>Our Services</h3>
                 <ul>
                   <li className='poppin dark text-sm mb-2'><Link href="/">Order Medicine</Link></li>
                   <li className='poppin dark text-sm mb-2'><Link href="/">polyclinic</Link></li>
                   <li className='poppin dark text-sm mb-2'><Link href="/">Lab Tests</Link></li>
                 </ul>
             </div>
-            <div className='col-span-2'>
-              <h2 className='poppin dark text-xl font-medium mb-3'>Featured Categories</h2>
+            <div className='col-span-6 lg:col-span-2 order-2'>
+              <h2 className='poppin dark text-[18px] md:text-xl font-medium mb-3'>Featured Categories</h2>
                 <ul>
                     <li className='poppin dark text-sm mb-2'><Link href="/">Vitamin Store</Link></li>
                     <li className='poppin dark text-sm mb-2'><Link href="/">Summer Store</Link></li>
@@ -45,8 +45,8 @@ export default function Footer() {
                     <li className='poppin dark text-sm mb-2'><Link href="/">Explore More</Link></li>
                 </ul>
             </div>
-            <div className='col-span-3 pl-5'>
-                <h2 className='poppin dark text-xl font-medium mb-3'>Book Lab Tests at Home</h2>
+            <div className='col-span-6 lg:col-span-3 lg:pl-5 order-4 md:order-4 lg:order-3'>
+                <h2 className='poppin dark text-[18px] md:text-xl font-medium mb-3'>Book Lab Tests at Home</h2>
                 <ul>
                     <li className='poppin dark text-sm mb-2'><Link href="/">RT PCR Test At Home</Link></li>
                     <li className='poppin dark text-sm mb-2'><Link href="/">Renal Profile (KFT, RFT Test)</Link></li>
@@ -59,8 +59,8 @@ export default function Footer() {
                     <li className='poppin dark text-sm mb-2'><Link href="/">Liver Function Test (LFT Test)</Link></li>
                 </ul>
             </div>
-            <div className='col-span-2'>
-                <h2 className='poppin dark text-xl font-medium mb-3'>Need Help</h2>
+            <div className='col-span-6 lg:col-span-2 order-3 md:order-3 lg:order-4'>
+                <h2 className='poppin dark text-[18px] md:text-xl font-medium mb-3'>Need Help</h2>
                 <ul>
                     <li className='poppin dark text-sm mb-2'><Link href="/">Privacy Policy</Link></li>
                     <li className='poppin dark text-sm mb-2'><Link href="/">Vulnerability Disclosure Policy</Link></li>
@@ -70,8 +70,8 @@ export default function Footer() {
                     
                 </ul>
             </div>
-            <div className='col-span-3 pl-5'>
-              <h2 className='poppin dark text-xl font-medium mb-3'>Find us on</h2>
+            <div className='col-span-12 lg:col-span-3 lg:pl-5 order-5'>
+              <h2 className='poppin dark text-[18px] md:text-xl font-medium mb-3'>Find us on</h2>
               <ul>
                     <li className='poppin dark text-sm mb-2 flex items-center text-center'>
                       <Link href="/"><Image src={fb} width={20} height={20} alt='image not found' /></Link>
@@ -79,7 +79,7 @@ export default function Footer() {
                       <Link href="/"><Image src={yt} width={20} height={20} alt='image not found' /></Link>
                     </li>     
                 </ul>
-                <h3 className='poppin dark text-xl font-medium mt-1 mb-3'>Our Payment Partners</h3>
+                <h3 className='poppin dark text-[18px] md:text-xl font-medium mt-1 mb-3'>Our Payment Partners</h3>
                 <div className='flex mb-5'>
                   <Image src={gapy} width={50} height={50} alt='image not found' />
                   <Image src={phonepe} width={30} height={30} className='mx-5' alt='image not found' />
@@ -95,7 +95,7 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-      <div className='text-center py-4 w-[1000px] mx-auto'>
+      <div className='text-center py-4 w-full lg:w-250 mx-auto px-5'>
         <p className='poppin dark text-sm leading-[1.2]'>© 2026 Nexus. All rights reserved. All medicines are dispensed in compliance with the Drugs and Cosmetics Act, 1940 and Drugs and Cosmetics Rules, 1945. We do not process requests for Schedule X and habit forming drugs.</p>
       </div>
     </div>

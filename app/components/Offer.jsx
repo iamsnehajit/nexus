@@ -35,15 +35,15 @@ export default function BlueBannerSlider() {
                 </div>
 
                 {/* Content Layer */}
-                <div className="relative z-10 px-10 md:px-20 w-full flex justify-between items-center">
+                <div className="relative z-10 px-5 md:px-20 w-full flex justify-between items-center">
                   <div className="max-w-xl text-white">
-                    <p className="poppin text-white text-4xl font-light mb-2">{banner.text}</p>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-2">
+                    <p className="poppin text-white text-2xl lg:text-4xl font-light mb-2">{banner.text}</p>
+                    <h2 className="text-3xl md:text-5xl font-bold mb-2">
                       <span className="text-[#F8C129] poppin">{banner.title}</span>
                     </h2>
-                    <p className="poppin text-white text-2xl font-light mb-5">{banner.subtitle}</p>
+                    <p className="poppin text-white text-xl lg:text-2xl font-light mb-5">{banner.subtitle}</p>
                     
-                    <button className="bg-[#FF6D00] hover:bg-[#e66200] text-white px-6 py-2 text-sm rounded-md font-medium transition-all poppin">
+                    <button className="bg-[#FF6D00] text-white px-6 py-2 text-sm rounded-md font-medium transition-all poppin">
                       Consult Now
                     </button>
                   </div>

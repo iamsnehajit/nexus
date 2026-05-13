@@ -24,7 +24,7 @@ export default function MultiSlideCarousel() {
     <div className="relative">
         <div className='container-custom'>
           <div className='product-cat-top'>
-            <h2 className='dark text-[25px] font-medium pt-10 pb-7'>Browse by health concerns</h2>
+            <h2 className='dark text-[20px] md:text-[25px] font-medium pt-10 pb-7'>Browse by health concerns</h2>
           </div>
             <Swiper
         modules={[Autoplay, Pagination]}
