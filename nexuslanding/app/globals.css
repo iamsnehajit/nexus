@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Nexus 70% Screen Wave Sync */
+.figma-exact-wave {
+  position: absolute;
+  font-size: 15vw; 
+  font-weight: 900; 
+  line-height: 1;
+  text-transform: uppercase;
+    
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C150,110 350,-40 500,50 C650,130 850,0 1000,50 C1150,90 1300,20 1400,50 L1400,120 L0,120 Z' fill='%23000'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,30 C150,110 350,-40 500,50 C650,130 850,0 1000,50 C1150,90 1300,20 1400,50 L1400,120 L0,120 Z' fill='%23000'/%3E%3C/svg%3E");
+  
+  -webkit-mask-size: 240% 100%;
+  mask-size: 240% 100%;
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  
+  animation: lockHorizontalWave 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards, 
+            lockVerticalRise 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes lockHorizontalWave {
+  0% { -webkit-mask-position: 0px 100%; mask-position: 0px 100%; }
+  85% { -webkit-mask-position: -1000px 100%; mask-position: -1000px 100%; }
+  100% { -webkit-mask-position: -1100px 100%; mask-position: -1100px 100%; }
+}
+
+@keyframes lockVerticalRise {
+  0% { clip-path: inset(100% 0% 0% 0%); }
+  15% { clip-path: inset(85% 0% 0% 0%); }
+  100% { clip-path: inset(0% 0% 0% 0%); }
+}
+
+.container-custom {
+  width: 100%;
+  max-w: 1400px; 
+  margin: 0 auto;
+}
+
+/* --- ১. ডিফল্ট মাউস হাইড (শুধু ডেস্কটপের জন্য) --- */
+@media (min-width: 768px) {
+  html, body, a, button {
+    cursor: none !important;
+  }
+}
+
+/* --- ২. কাস্টম কার্সারের বেইজ বা স্বাভাবিক স্টাইল --- */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #00A896; /* ডিফল্ট ছোট বিন্দুর কালার */
+  border-radius: 50%;
+  pointer-events: none; /* এটি না দিলে লিংকে ক্লিক করা যাবে না */
+  z-index: 999999 !important; /* স্ক্রিনের সবার ওপরে রাখার জন্য */
+  transform: translate(-50%, -50%);
+  will-change: transform;
+  
+  /* ছোট থেকে বড় বৃত্তে রূপান্তরের স্মুথ ট্রানজিশন */
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              height 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              background-color 0.3s ease;
+}
+
+/* --- ৩. হোভার করলে ফিগমা স্টাইল মাস্কিং ইফেক্ট --- */
+#custom-cursor.cursor-grow {
+  width: 35px !important; /* বৃত্তের সাইজ */
+  height: 35px !important;
+  
+  /* ⚠️ এখানে #ffffff (সাদা) দেওয়া বাধ্যতামূলক, তবেই mix-blend-mode নিচের লেখার কালার নিখুঁত উল্টাতে পারবে */
+  background-color: #00A896 !important; 
+  
+  /* এই প্রপার্টিটি বৃত্তের ভেতরের টেক্সটটুকুকে শুধু ইনভার্ট (ম্যাজিক কালার চেঞ্জ) করবে */
+  mix-blend-mode: difference !important; 
+}
+
+a, button {
+  transition: color 0.3s ease;
+}
+.container-custom{width: 1400px; margin: 0 auto;}
+.dark{color: #242424;}
+.hori{translate: none !important;}
+.arrow
+{
+  position: absolute;
+  bottom: 60px;
+  right: 5px;
+  margin-left:-20px;
+  width: 80px;
+  height: 40px; z-index: 10;
+}
+.arrow.contact{width: auto;}
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* floate */
+@-webkit-keyframes float {
+  0% {
+   
+    transform: translatey(0px);
+  }
+  50% {
+   
+    transform: translatey(-20px);
+  }
+  100% {
+    
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+   
+    transform: translatey(0px);
+  }
+  50% {
+   
+    transform: translatey(-20px);
+  }
+  100% {
+   
+    transform: translatey(0px);
+  }
+}
+.float{
+  -webkit-animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
+}
+footer{background-image: url('../public/images/bg-2.png'); background-size: cover;}

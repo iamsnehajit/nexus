@@ -57,6 +57,10 @@ Select{background-color: antiquewhite !important;}
 /* .top-dropdown.onlysection .css-1wy0on6, .css-hlgwow {height: 25px !important;}
 .css-1dimb5e-singleValue{overflow: auto !important;} */ 
 
+/* listing page */
+.listing-bottom-txt::after{width: 8px; height: 8px; background-color: #fff; border-radius: 50%; display: inline-block; z-index: 1; position: absolute; top: 20px; left: 606px; content: '';}
+.listing-bottom-txt::before{width: 8px; height: 8px; background-color: #fff; border-radius: 50%; display: inline-block; z-index: 1; position: absolute; top: 20px; left: 773px; content: '';}
+.listing-bottom-txt span{width: 30px; height: 30px; display: inline-block;}
 @media (max-width: 1366px) {
   .container-custom{width: 1280px; margin: 0 auto;}
 }
