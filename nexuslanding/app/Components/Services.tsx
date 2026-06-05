@@ -19,7 +19,7 @@ export default function Services() {
                     <div>
                     <SplitText
                     text="What's possible with us"
-                    className="text-white font-semibold text-[60px] leading-[1.2] tracking-[3%]"
+                    className="text-white font-semibold text-[60px] leading-[1.2] tracking-[1%]"
                     delay={50}
                     duration={1.25}
                     ease="power3.out"

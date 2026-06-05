@@ -18,7 +18,7 @@ export default function Scroll() {
           <Image src={Star} alt="icon" className="w-10 h-10 inline-block mx-2" />
         </span>
       ]}
-        velocity={100}
+        velocity={50}
         className="custom-scroll-text text-[#242424] text-[60px] font-normal"
         numCopies={6}
         damping={50}

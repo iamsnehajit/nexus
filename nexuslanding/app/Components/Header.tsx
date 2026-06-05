@@ -1,12 +1,32 @@
 "use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import logo from "../../public/images/logo.svg";
 import Arrow from "../../public/images/arrow.svg";
 import Image from "next/image";
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      
+      if (window.scrollY > 500) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="fixed top-0 left-0 z-50 py-3 bg-transparent select-none w-full z-50">
+    <header className={`fixed top-0 left-0 w-full z-50 select-none transition-all duration-300 ease-in-out ${
+        isScrolled 
+          ? "py-2 bg-white/30 backdrop-blur-md border-b border-white/10 shadow-sm" // 
+          : "py-4 bg-transparent"
+      }`}>
       <div className="container-custom flex items-center justify-between">
       <Link href="/">
         <Image src={logo} alt="image not found" className="w-48"/>

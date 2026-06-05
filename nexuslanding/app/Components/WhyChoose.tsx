@@ -13,7 +13,7 @@ export default function WhyChoose() {
   return (
     <div>
         <div className="container-custom relative py-20">
-            <div className="grid grid-cols-12 gap-4 h-screen">
+            <div className="grid grid-cols-12 gap-4 h-screen relative z-20">
                 <div className="col-span-4 h-full flex justify-start items-start">
                     <AnimatedContent distance={100} direction="vertical" reverse={false} duration={1} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={1}>
                         <Image src={Whychoose1} alt="Image not found" className="w-full"/>
@@ -25,7 +25,7 @@ export default function WhyChoose() {
                         <div className="mt-3">
                             <SplitText
   text="Compassionate Care Always There Health First"
-  className="text-[#0C0B0B] font-semibold text-[38px] leading-[1.2] tracking-[3%]"
+  className="text-[#0C0B0B] font-semibold text-[38px] leading-[1.2] tracking-[1%]"
   delay={50}
   duration={1.25}
   ease="power3.out"

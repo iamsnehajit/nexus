@@ -151,3 +151,34 @@ a, button {
     animation: float 6s ease-in-out infinite;
 }
 footer{background-image: url('../public/images/bg-2.png'); background-size: cover;}
+/* 🚩 ফ্ল্যাগ ওয়েভ অ্যানিমেশন স্টাইল */
+.flag-wave-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.flag-wave-element {
+  animation: flagAnimate 6s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes flagAnimate {
+  0% {
+    transform: rotateX(2deg) rotateY(-3deg) skewX(-2deg) scale(1.05);
+  }
+  50% {
+    transform: rotateX(-3deg) rotateY(4deg) skewX(3deg) scale(1.08) translateY(-5px);
+  }
+  100% {
+    transform: rotateX(3deg) rotateY(-2deg) skewX(-3deg) scale(1.05) translateY(5px);
+  }
+}
+@media (max-width: 1366px) {
+  .container-custom{width: 1300px; margin: 0 auto;}
+}
+@media (max-width: 1280px) {
+  .container-custom{width: 1230px; margin: 0 auto;}
+}
+@media (max-width: 1199px) {
+  .container-custom{width: 100px; margin: 0 15px;}
+}
