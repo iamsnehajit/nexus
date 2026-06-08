@@ -4,16 +4,15 @@ import Star from "../../public/images/star.svg";
 
 export default function Scroll() {
   return (
-    <div className="py-8">
-        
+    <div className="py-6">
   
         <ScrollVelocity
        texts={[
-        <span className="inline-flex items-center gap-6 py-2">
+        <span className="inline-flex items-center gap-6 py-3">
           Quality Care Service
           <Image src={Star} alt="icon" className="w-10 h-10 inline-block mx-2" />
         </span>,
-        <span className="inline-flex items-center gap-6">
+        <span className="inline-flex items-center gap-6 py-3">
           Quality Care Service 
           <Image src={Star} alt="icon" className="w-10 h-10 inline-block mx-2" />
         </span>

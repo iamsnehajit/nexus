@@ -108,10 +108,11 @@ export default function TextSplitSection() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top top",
-          end: "+=150%", 
-          scrub: 1,      
-          pin: true,     
+         
+          start: "top 90%",
+          end: "top top", 
+          scrub: 1.5,     
+          pin: false,    
         },
       });
 
@@ -135,9 +136,7 @@ export default function TextSplitSection() {
   }, []);
 
   return (
-    <div ref={containerRef} className="w-full h-screen bg-white relative overflow-hidden flex items-center justify-center">
-      
-      {/* 🎯 🌊 ফ্ল্যাগ ওয়েভ লিকুইড ব্যাকগ্রাউন্ড এরিয়া */}
+    <div ref={containerRef} className="w-full min-h-[500px]  relative overflow-hidden flex items-center justify-center">
       <div className="absolute w-full bottom-0 left-0 z-0 pointer-events-none select-none h-[40vh] md:h-[50vh] overflow-hidden">
         <div className="absolute inset-0 w-full h-full flag-wave-container">
           <Image 
@@ -163,15 +162,15 @@ export default function TextSplitSection() {
       {/* 🎯 মাঝখানের কন্টেন্ট */}
       <div 
         ref={centerContentRef} 
-        className="absolute flex flex-col items-center text-center max-w-[600px] px-6 z-20 translate-y-[100px] opacity-0"
+        className="absolute flex flex-col items-center text-center max-w-[680px] px-6 z-20 translate-y-[100px] opacity-0"
       >
-        <h2 className="text-[48px] md:text-[54px] font-medium text-[#121212] leading-[1.2]">
-          We’re a collaborative team of experts
+        <h2 className="text-[48px] md:text-[50px] font-medium text-[#121212] leading-[1.1]">
+          We’re a collaborative<br/>team of experts
         </h2>
-        <p className="text-[18px] md:text-[18px] text-neutral-500 max-w-[560px] mx-auto mt-5 leading-relaxed">
+        <p className="text-[18px] md:text-[18px] text-[#2C2C2C] max-w-[560px] mx-auto mt-6 leading-[1.2]">
           Health care is a vital aspect of maintaining overall well-being, encompassing a range of services from preventive
         </p>
-        <div className="mt-8">
+        <div className="mt-9">
           <CustomButton text="Contact Us" variant="lime" href="/contact" />
         </div>
       </div>

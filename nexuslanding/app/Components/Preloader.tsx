@@ -8,16 +8,37 @@ export default function Preloader() {
   useEffect(() => {
     const counterObj = { value: 0 };
     
+    // const tl = gsap.timeline({
+    //   onComplete: () => {
+    //     gsap.to("#preloader-overlay", {
+    //       yPercent: -100,
+    //       duration: 0.8,
+    //       ease: "power4.inOut",
+    //       delay: 0.2,
+    //     });
+    //   }
+    // });
     const tl = gsap.timeline({
+  onComplete: () => {
+    gsap.to("#preloader-overlay", {
+      scale: 5,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power3.inOut",
+      delay: 1.5,
+      pointerEvents: "none",
+     
       onComplete: () => {
-        gsap.to("#preloader-overlay", {
-          yPercent: -100,
-          duration: 0.8,
-          ease: "power4.inOut",
-          delay: 0.2,
-        });
+       
+        const loader = document.getElementById("preloader-overlay");
+        if (loader) loader.style.display = "none";
+
+        
+        window.dispatchEvent(new Event('resize'));
       }
     });
+  }
+});
 
     tl.to(counterObj, {
       value: 100,
@@ -34,21 +55,21 @@ export default function Preloader() {
       id="preloader-overlay"
       className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#151515] text-white overflow-hidden select-none"
     >
-      {/* মেইন কন্টেইনার বক্স যা স্ক্রিনের ৭০% উইডথ (w-[70vw]) জুড়ে থাকবে */}
-      <div className="relative w-[70vw] h-[20vh] md:h-[30vh] flex items-center justify-center">
+     
+      <div className="relative w-[58vw] h-[20vh] md:h-[30vh] flex items-center justify-center">
         
-        {/* পেছনের আবছা টেক্সট - কন্টেইনারের পুরোটা জুড়ে বড় হবে (w-full h-full) */}
+       
         <span className="absolute inset-0 flex items-center justify-center text-[15vw] font-black tracking-tight text-white/5 uppercase leading-none w-full text-center">
           Nexus
         </span>
         
-        {/* সামনের ওয়াটার/ওয়েভ ফিল টেক্সট */}
+        
         <span className="absolute inset-0 flex items-center justify-center text-[15vw] font-black uppercase tracking-tight text-white figma-exact-wave overflow-hidden leading-none w-full text-center">
           Nexus
         </span>
 
-        {/* ছোট কাউন্টার - প্রোগ্রেস বার ছাড়া একদম নিচে ডান কোনায় সেট করা */}
-        <div className="absolute bottom-[-25px] right-16 flex items-center gap-1 font-mono text-xs sm:text-sm text-neutral-500 bg-[#151515] px-2">
+      
+        <div className="absolute bottom-[-25px] right-0 flex items-center gap-1 font-mono text-xl text-white bg-[#151515] px-2">
           <span>loading...</span>
           <span className="w-[35px] text-right">{count}%</span>
         </div>

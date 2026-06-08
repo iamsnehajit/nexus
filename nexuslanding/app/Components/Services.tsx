@@ -1,4 +1,4 @@
-import CustomButton from "./ui/CustomButton";
+import CustomButton from "./ui/CustomButton2";
 import AnimatedContent from "./ui/AnimatedContent";
 import SplitText from "../Components/ui/SplitText";
 import Image from "next/image";
@@ -34,23 +34,23 @@ export default function Services() {
                     />
                     </div>
                 </div>
-                <div className="relative py-10 border-b border-[#919090]">
+                <div className="group relative py-10 border-b border-[#919090]">
                     <div className="grid grid-cols-12">
                         
                         <div className="col-span-6 flex">
                             
-                            <Image src={quality} alt="Image not fonnd" className="w-16 pr-4" />
+                            <Image src={quality} alt="Image not fonnd" className="w-16 pr-6" />
                        
-                            <h3 className="text-white font-medium text-4xl leading-[1.2]">Quality Care Exceptional Medicines Service</h3>
+                            <h3 className="text-white font-medium text-4xl leading-[1.2]">Quality Care<br/>Exceptional Medicines Service</h3>
                         </div>
                         <div className="col-span-2">
-                            <ul>
+                            <ul className="list-disc pl-5">
                                 <li className="text-[18px] text-[#A8A6A6] mb-1">Your Health, Our Priority</li>
                                 <li className="text-[18px] text-[#A8A6A6] mb-1">Harmony Health</li>
                             </ul>
                         </div>
                                                 
-                            <div className="col-span-2 group relative cursor-pointer">
+                            <div className="col-span-2 relative cursor-pointer">
                                 
                             
                                 <span className="text-white"></span> 
@@ -59,7 +59,7 @@ export default function Services() {
                                 <Image 
                                 src={pinimg} 
                                 alt="Hover Image" 
-                                className="w-36 absolute top-0 left-0 opacity-0 pointer-events-none transition-opacity float duration-300 group-hover:opacity-100" 
+                                className="w-48 absolute top-0 left-0 opacity-0 pointer-events-none transition-opacity float duration-300 group-hover:opacity-100" 
                                 />
                             </div>
                         <div className="col-span-2">
@@ -68,23 +68,23 @@ export default function Services() {
                     </div>
                 </div>
 
-                <div className="relative py-10 border-b border-[#919090]">
+                <div className="group relative py-10 border-b border-[#919090]">
                     <div className="grid grid-cols-12">
                         
                         <div className="col-span-6 flex">
                             
-                            <Image src={healing} alt="Image not fonnd" className="w-16 pr-4" />
+                            <Image src={healing} alt="Image not fonnd" className="w-16 pr-6" />
                        
-                            <h3 className="text-white font-medium text-4xl leading-[1.2]">Healing Lives One Patient at a Time Consult doctors</h3>
+                            <h3 className="text-white font-medium text-4xl leading-[1.2]">Healing Lives One<br/> Patient at a Time Consult doctors</h3>
                         </div>
                         <div className="col-span-2">
-                            <ul>
+                            <ul className="list-disc pl-5">
                                 <li className="text-[18px] text-[#A8A6A6] mb-1">Your Health, Our Priority</li>
                                 <li className="text-[18px] text-[#A8A6A6] mb-1">Harmony Health</li>
                             </ul>
                         </div>
                                                 
-                            <div className="col-span-2 group relative cursor-pointer">
+                            <div className="col-span-2 relative cursor-pointer">
                                 
                             
                                 <span className="text-white"></span> 
@@ -93,32 +93,32 @@ export default function Services() {
                                 <Image 
                                 src={pinimg} 
                                 alt="Hover Image" 
-                                className="w-36 absolute top-0 left-0 opacity-0 pointer-events-none transition-opacity float duration-300 group-hover:opacity-100" 
+                                className="w-48 absolute top-0 left-0 opacity-0 pointer-events-none transition-opacity float duration-300 group-hover:opacity-100" 
                                 />
                             </div>
                         <div className="col-span-2">
-                             <CustomButton text="Contact Us"  href="/contact" variant="lime" />
+                             <CustomButton text="Contact Us"  href="/contact" variant="lime" className="pointer-events-auto"/>
                         </div>
                     </div>
                 </div>
 
-                <div className="relative py-10">
+                <div className="group relative py-10">
                     <div className="grid grid-cols-12">
                         
                         <div className="col-span-6 flex">
                             
-                            <Image src={cure} alt="Image not fonnd" className="w-16 pr-4" />
+                            <Image src={cure} alt="Image not fonnd" className="w-16 pr-6" />
                        
-                            <h3 className="text-white font-medium text-4xl leading-[1.2]">Caring for You Caring for Lab tests</h3>
+                            <h3 className="text-white font-medium text-4xl leading-[1.2]">Caring for You Caring<br/> for Lab tests</h3>
                         </div>
                         <div className="col-span-2">
-                            <ul>
+                            <ul className="list-disc pl-5">
                                 <li className="text-[18px] text-[#A8A6A6] mb-1">Your Health, Our Priority</li>
                                 <li className="text-[18px] text-[#A8A6A6] mb-1">Harmony Health</li>
                             </ul>
                         </div>
                                                 
-                            <div className="col-span-2 group relative cursor-pointer">
+                            <div className="col-span-2 relative cursor-pointer">
                                 
                             
                                 <span className="text-white"></span> 
@@ -127,11 +127,11 @@ export default function Services() {
                                 <Image 
                                 src={pinimg} 
                                 alt="Hover Image" 
-                                className="w-36 absolute top-0 left-0 opacity-0 pointer-events-none transition-opacity float duration-300 group-hover:opacity-100" 
+                                className="w-48 absolute top-0 left-0 opacity-0 pointer-events-none transition-opacity float duration-300 group-hover:opacity-100" 
                                 />
                             </div>
                         <div className="col-span-2">
-                             <CustomButton text="Contact Us"  href="/contact" variant="lime" />
+                             <CustomButton text="Contact Us"  href="/contact" variant="lime" className="pointer-events-auto" />
                         </div>
                     </div>
                 </div>

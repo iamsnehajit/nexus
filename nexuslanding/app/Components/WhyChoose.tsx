@@ -13,19 +13,20 @@ export default function WhyChoose() {
   return (
     <div>
         <div className="container-custom relative py-20">
-            <div className="grid grid-cols-12 gap-4 h-screen relative z-20">
+            <div className="grid grid-cols-12 gap-8 h-screen relative z-20">
                 <div className="col-span-4 h-full flex justify-start items-start">
-                    <AnimatedContent distance={100} direction="vertical" reverse={false} duration={1} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={1}>
+                    <AnimatedContent distance={100} direction="vertical" reverse={false} duration={1} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={1} className="w-full">
                         <Image src={Whychoose1} alt="Image not found" className="w-full"/>
                     </AnimatedContent>
                 </div>
                 <div className="col-span-4">
-                    <div className="pt-[10vh] pl-2">
+                    <div className="flex h-screen flex-col justify-center">
+                    <div className="pl-2">
                         <label className="text-xl text-[#0D7F80] relative pl-28"><span className="w-27 h-2 border-t border-[#0D7F80] z-10 absolute left-0 top-1/2"></span>Why Choose Nexus</label>
                         <div className="mt-3">
                             <SplitText
   text="Compassionate Care Always There Health First"
-  className="text-[#0C0B0B] font-semibold text-[38px] leading-[1.2] tracking-[1%]"
+  className="text-[#0C0B0B] font-semibold text-[40px] leading-[1.2] tracking-[1%]"
   delay={50}
   duration={1.25}
   ease="power3.out"
@@ -72,9 +73,10 @@ export default function WhyChoose() {
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
                 <div className="col-span-4 h-full flex justify-end items-end">
-                    <AnimatedContent distance={100} direction="vertical" reverse={false} duration={1} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={1}>
+                    <AnimatedContent distance={100} direction="vertical" reverse={false} duration={1} ease="power3.out" initialOpacity={0} animateOpacity scale={1} threshold={0.1} delay={1} className="w-full">
                         <Image src={Whychoose2} alt="Image not found" className="w-full relative z-20"/>
                     </AnimatedContent>
                 </div>
