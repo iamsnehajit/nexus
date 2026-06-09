@@ -20,7 +20,7 @@ export default function Hero() {
   
   const bounceRef = useRef<HTMLDivElement>(null);
   const contactTextRef = useRef<HTMLParagraphElement>(null);
-  const contactButtonRef = useRef<HTMLAnchorElement>(null);
+  const contactButtonRef = useRef<HTMLDivElement>(null);
    const circularTextRef = useRef<HTMLDivElement>(null);
 
 useEffect(() => {
